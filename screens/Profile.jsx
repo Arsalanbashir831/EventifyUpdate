@@ -34,8 +34,8 @@ const Profile = () => {
     navigation.goBack();
   };
 
-  const logout = () => {
-    signOut(auth);
+  const logout = async () => {
+    await signOut(auth);
     navigation.navigate("GetStarted");
   };
 

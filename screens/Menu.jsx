@@ -12,7 +12,7 @@ const Menu = () => {
   } = useRoute();
   const navigation = useNavigation();
   const goToProfile = () => {
-    navigation.navigate("Profile");
+    navigation.navigate("Profile", {user});
   };
   const goToHome = () => {
     navigation.navigate("Home");

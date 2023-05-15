@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import Auth from "./Auth";
 
+
 export default function App() {
   return (
     <NavigationContainer>

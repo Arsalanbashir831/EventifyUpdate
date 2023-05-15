@@ -12,6 +12,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { login } from "../store";
+import { adminData } from "../store";
 
 const AddEvent = () => {
   const [event, setEvent] = useState({
@@ -87,6 +88,7 @@ const AddEvent = () => {
     await addDoc(collectionRef, uploadData);
     Alert.alert("Upload", "Event uploaded");
     dispatch(login(user));
+    dispatch(adminData(""));
     navigation.navigate("Home");
   };
 

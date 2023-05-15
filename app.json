@@ -15,14 +15,20 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arsalan2206.myapp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.arsalan2206.myapp"
+      "package": "com.arsalan2206.myapp",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD_MEGy3H88ZW_JfQFMGJ_EQcMM-10888o"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

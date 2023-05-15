@@ -20,7 +20,7 @@ const Home = () => {
   const allEventsData = useSelector((state) => state.event.value);
   const dispatch = useDispatch();
   const [current, setCurrent] = useState("All");
-  const [locations, setLocations] = useState();
+  const admin = useSelector((state) => state.admin.value);
 
   // Get Events
   useEffect(() => {
@@ -48,7 +48,7 @@ const Home = () => {
       dispatch(allEvents(events));
     };
     getEvents();
-  }, [user]);
+  }, [user, admin]);
 
   // Get Users
   useEffect(() => {

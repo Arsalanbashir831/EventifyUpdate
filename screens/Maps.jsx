@@ -6,6 +6,7 @@ import { TouchableOpacity } from "react-native";
 import { Image } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { useSelector } from "react-redux";
+import { PROVIDER_GOOGLE } from "react-native-maps"
 
 const Maps = () => {
   const user = useSelector((state) => state.user.value);
@@ -45,7 +46,7 @@ const Maps = () => {
     <>
       {location && (
         <>
-          <MapView
+          <MapView provider={PROVIDER_GOOGLE}
             initialRegion={{
               latitude: location.latitude,
               longitude: location.longitude,

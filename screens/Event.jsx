@@ -36,7 +36,7 @@ const Event = () => {
       Alert.alert("Event", "Event already joined.");
       return;
     }
-    e.people.concat({
+    e.people = e.people.concat({
       uid: user.id,
       image: user.image,
     });

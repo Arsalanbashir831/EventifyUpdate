@@ -14,6 +14,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./config/firebase";
 
 
+
 const Login = () => {
   const [isChecked, setIsChecked] = useState();
   const [email, setEmail] = useState("");
@@ -49,9 +50,7 @@ const Login = () => {
         console.log("Login failed:", errorMessage);
       });
   };
-  // Somewhere in your code
-
-
+ 
 
   return (
     <ImageBackground
@@ -99,23 +98,7 @@ const Login = () => {
                 Sign in
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-
-              <LinearGradient
-                className="rounded-2xl mt-3"
-                colors={["rgba(194,229,156,0.5)", "rgba(100,179,224,0.5)"]}
-              >
-                <View className="flex-row items-center justify-center space-x-2">
-                  <Image
-                    className="w-7 h-7"
-                    source={require("../assets/google.png")}
-                  ></Image>
-                  <Text className="text-center py-3 text-lg text-white">
-                    Sign in with Google
-                  </Text>
-                </View>
-              </LinearGradient>
-            </TouchableOpacity>
+           
           </View>
           <View className="flex-row mt-3 space-x-2">
             <Text className="text-white">Don't have an account?</Text>

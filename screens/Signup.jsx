@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation } from "@react-navigation/native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db, signInWithGoogle } from "./config/firebase";
+import { auth, db } from "./config/firebase";
 import { doc, setDoc } from "firebase/firestore";
 
 const Signup = () => {
@@ -118,22 +118,7 @@ const Signup = () => {
                 Sign up
               </Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={signInWithGoogle}>
-              <LinearGradient
-                className="rounded-2xl mt-3"
-                colors={["rgba(194,229,156,0.5)", "rgba(100,179,224,0.5)"]}
-              >
-                <View className="flex-row items-center justify-center space-x-2">
-                  <Image
-                    className="w-7 h-7"
-                    source={require("../assets/google.png")}
-                  ></Image>
-                  <Text className="text-center py-3 text-lg text-white">
-                    Sign up with Google
-                  </Text>
-                </View>
-              </LinearGradient>
-            </TouchableOpacity>
+           
           </View>
           <View className="flex-row mt-3 space-x-2">
             <Text className="text-white">Already have an account?</Text>
